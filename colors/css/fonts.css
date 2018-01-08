@@ -1,0 +1,193 @@
+﻿@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('../fonts/HelveticaNeue.eot');
+    src: url('../fonts/HelveticaNeue.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/HelveticaNeue.woff2') format('woff2'),
+         url('../fonts/HelveticaNeue.woff') format('woff'),
+         url('../fonts/HelveticaNeue.ttf') format('truetype'),
+         url('../fonts/HelveticaNeue.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;    
+}
+@font-face {
+    font-family: 'HelveticaBd';
+    src: url('../fonts/HelveticaBd.eot');
+    src: url('../fonts/HelveticaBd.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/HelveticaBd.woff') format('woff'),
+         url('../fonts/HelveticaBd.ttf') format('truetype'),
+         url('../fonts/HelveticaBd.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;    
+}
+@font-face {
+    font-family: 'HelveticaMd';
+    src: url('../fonts/HelveticaMed.eot');
+    src: url('../fonts/HelveticaMed.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/HelveticaMed.woff') format('woff'),
+         url('../fonts/HelveticaMed.ttf') format('truetype'),
+         url('../fonts/HelveticaMed.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;    
+}
+@font-face {
+    font-family: 'latoregular';
+    src: url('../fonts/lato-regular.eot');
+    src: url('../fonts/lato-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-regular.woff2') format('woff2'),
+         url('../fonts/lato-regular.woff') format('woff'),
+         url('../fonts/lato-regular.ttf') format('truetype'),
+         url('../fonts/lato-regular.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family:"latobold";
+	src: url('../fonts/lato-Bold.eot');
+    src: url('../fonts/lato-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-Bold.woff2') format('woff2'),
+         url('../fonts/lato-Bold.woff') format('woff'),
+         url('../fonts/lato-Bold.ttf') format('truetype'),
+         url('../fonts/lato-Bold.svg#latoregular') format('svg');
+	font-weight:normal;	
+}
+@font-face {
+	font-family:"oswaldRegular";
+	src: url('../fonts/oswald-regular.eot');
+    src: url('../fonts/oswald-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oswald-regular.woff2') format('woff2'),
+         url('../fonts/oswald-regular.woff') format('woff'),
+         url('../fonts/oswald-regular.ttf') format('truetype'),
+         url('../fonts/oswald-regular.svg#latoregular') format('svg');
+	font-weight:normal;	
+}
+@font-face {
+	font-family:"oswaldBold";
+	src: url('../fonts/oswald-bold.eot');
+    src: url('../fonts/oswald-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oswald-bold.woff2') format('woff2'),
+         url('../fonts/oswald-bold.woff') format('woff'),
+         url('../fonts/oswald-bold.ttf') format('truetype'),
+         url('../fonts/oswald-bold.svg#latoregular') format('svg');
+	font-weight:normal;	
+}
+@font-face {
+	font-family:"openSansRegular";
+	src: url('../fonts/opensans-regular.eot');
+    src: url('../fonts/opensans-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-regular.woff2') format('woff2'),
+         url('../fonts/opensans-regular.woff') format('woff'),
+         url('../fonts/opensans-regular.ttf') format('truetype'),
+         url('../fonts/opensans-regular.svg#latoregular') format('svg');
+	font-weight:normal;
+}
+@font-face {
+	font-family:"openSansExBold";
+	src: url('../fonts/opensans-extrabold.eot');
+    src: url('../fonts/opensans-extrabold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-extrabold.woff2') format('woff2'),
+         url('../fonts/opensans-extrabold.woff') format('woff'),
+         url('../fonts/opensans-extrabold.ttf') format('truetype'),
+         url('../fonts/opensans-extrabold.svg#latoregular') format('svg');
+	font-weight:normal;
+}
+@font-face {
+	font-family:"poppinRegular";
+	src: url('../fonts/poppins-reg.eot');
+    src: url('../fonts/poppins-reg.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/poppins-reg.woff2') format('woff2'),
+         url('../fonts/poppins-reg.woff') format('woff'),
+         url('../fonts/poppins-reg.ttf') format('truetype'),
+         url('../fonts/poppins-reg.svg#latoregular') format('svg');
+	font-weight:normal;
+}
+@font-face {
+	font-family:"poppinSemiBd";
+	src: url('../fonts/poppins-semibold.eot');
+    src: url('../fonts/poppins-semibold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/poppins-semibold.woff2') format('woff2'),
+         url('../fonts/poppins-semibold.woff') format('woff'),
+         url('../fonts/poppins-semibold.ttf') format('truetype'),
+         url('../fonts/poppins-semibold.svg#latoregular') format('svg');
+	font-weight:normal;
+}
+@font-face {
+	font-family:"mavenBd";
+	src: url('../fonts/mavenpro-bold.eot');
+    src: url('../fonts/mavenpro-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/mavenpro-bold.woff2') format('woff2'),
+         url('../fonts/mavenpro-bold.woff') format('woff'),
+         url('../fonts/mavenpro-bold.ttf') format('truetype'),
+         url('../fonts/mavenpro-bold.svg#latoregular') format('svg');
+	font-weight:normal;
+}
+@font-face {
+	font-family:"poppinMd";
+	src: url('../fonts/poppins-medium.eot');
+    src: url('../fonts/poppins-medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/poppins-medium.woff2') format('woff2'),
+         url('../fonts/poppins-medium.woff') format('woff'),
+         url('../fonts/poppins-medium.ttf') format('truetype'),
+         url('../fonts/poppins-medium.svg#latoregular') format('svg');
+	font-weight:normal;
+}
+@font-face {
+	font-family:"swiss721";
+	src: url('../fonts/swiss_721.eot');
+    src: url('../fonts/swiss_721.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/swiss_721.woff2') format('woff2'),
+         url('../fonts/swiss_721.woff') format('woff'),
+         url('../fonts/swiss_721.ttf') format('truetype'),
+         url('../fonts/swiss_721.svg#latoregular') format('svg');
+	font-weight:normal;
+}
+
+
+
+.Helv-reg {
+    font-family: 'HelveticaNeue'!important;
+    text-rendering: optimizeLegibility;
+}
+.Helv-bd {
+    font-family: 'HelveticaBd'!important;
+    text-rendering: optimizeLegibility;
+}
+.Helv-md {
+    font-family: 'HelveticaMd'!important;
+    text-rendering: optimizeLegibility;
+}
+.lato-reg {
+    font-family: 'latoregular';
+    text-rendering: optimizeLegibility;
+}
+.lato-bd {
+    font-family:"latobold";
+    text-rendering: optimizeLegibility;
+}
+.oswald-reg {
+    font-family:"oswaldRegular";
+    text-rendering: optimizeLegibility;
+}
+.oswald-bd {
+    font-family: "oswaldBold";
+    text-rendering: optimizeLegibility;
+}
+.poppin-reg {
+    font-family: "poppinRegular";
+    text-rendering: optimizeLegibility;
+}
+.poppin-semi-bd {
+    font-family:"poppinSemiBd";
+    text-rendering: optimizeLegibility;
+}
+.poppin-md {
+    font-family:"poppinMd";
+    text-rendering: optimizeLegibility;
+}
+.maven-bd {
+    font-family:"mavenBd";
+    text-rendering: optimizeLegibility;
+}
+.swiss-721 {
+    font-family:"swiss721";
+    text-rendering: optimizeLegibility;
+}

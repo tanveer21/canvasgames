@@ -1,0 +1,456 @@
+﻿/*!
+ * @copyright &copy; Kartik Visweswaran, Krajee.com, 2013 - 2015
+ * @version 3.5.4
+ *
+ * A simple yet powerful JQuery star rating plugin that allows rendering
+ * fractional star ratings and supports Right to Left (RTL) input.
+ *
+ * For more JQuery/Bootstrap plugins and demos visit http://plugins.krajee.com
+ * For more Yii related demos visit http://demos.krajee.com
+ */
+
+.rating-loading {
+    width: 25px;
+    height: 25px;
+    font-size: 0px;
+    color: #fff;
+    background: transparent url('../img/loading.gif') top left no-repeat;
+    border: none;
+}
+/*
+ * Stars
+ */
+.rating-fa {
+    font-family: 'FontAwesome';
+    padding-left: 1px;
+}
+.rating-fa .rating-stars:before {
+    padding-left: 1px;
+}
+.rating-gly {
+    font-family: 'Glyphicons Halflings';
+}
+.rating-gly-star {
+    font-family: 'Glyphicons Halflings';
+    padding-left: 2px;
+}
+.rating-gly-star .rating-stars:before {
+    padding-left: 2px;
+}
+.rating-lg .rating-gly-star,
+.rating-lg .rating-gly-star .rating-stars:before {
+    padding-left: 4px;
+}
+.rating-xl .rating-gly-star,
+.rating-xl .rating-gly-star .rating-stars:before {
+    padding-left: 2px;
+}
+.rating-active {
+    cursor: default;
+}
+.rating-disabled {
+    cursor: not-allowed;
+}
+.rating-uni {
+    font-size: 1.2em;
+    margin-top: -5px;
+}
+.rating-container {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    color: #cccccc;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.rating-container:before {
+    content: attr(data-content);
+}
+.rating-container .rating-stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #ffd42a;
+    transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -webkit-transition: all 0.25s ease-out;
+}
+.rating-container .rating-stars:before {
+    content: attr(data-content);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+}
+.rating-container-rtl {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    color: #fde16d;
+}
+.rating-container-rtl:before {
+    content: attr(data-content);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+}
+.rating-container-rtl .rating-stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #e3e3e3;
+    transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -webkit-transition: all 0.25s ease-out;
+}
+.rating-container-rtl .rating-stars:before {
+    content: attr(data-content);
+}
+/**
+ * Rating sizes
+ */
+
+.rating-xl {
+    font-size: 4.89em;
+}
+.rating-lg {
+    font-size: 3.91em;
+}
+.rating-md {
+    font-size: 3.13em;
+}
+.rating-sm {
+    font-size: 2.5em;
+}
+.rating-xs {
+    font-size: 2em;
+}
+/**
+ * Clear rating button
+ */
+
+.star-rating .clear-rating,
+.star-rating-rtl .clear-rating {
+    color: #aaa;
+    cursor: not-allowed;
+    /* display: inline-block; */
+    
+    display: none;
+    vertical-align: middle;
+    font-size: 60%;
+}
+.clear-rating-active {
+    cursor: pointer !important;
+}
+.clear-rating-active:hover {
+    color: #843534;
+}
+.star-rating .clear-rating {
+    padding-right: 5px;
+}
+/**
+ * Caption
+ */
+
+.star-rating .caption,
+.star-rating-rtl .caption {
+    color: #999;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 55%;
+}
+.star-rating .caption .label,
+.star-rating-rtl .caption .label {
+    vertical-align: top;
+}
+/* .star-rating .caption {
+    padding-left: 5px;
+}
+
+.star-rating-rtl .caption {
+    padding-right: 5px;
+} */
+/**
+ * Print
+ */
+
+@media print {
+    .rating-container,
+    .rating-container:before,
+    .rating-container-rtl .rating-stars,
+    .rating-container-rtl .rating-stars:before {
+        color: #f3f3f3!important;
+    }
+    .star-rating .clear-rating,
+    .star-rating-rtl .clear-rating {
+        display: none;
+    }
+}
+.SimpleChart {
+    position: relative;
+}
+.SimpleChart #tip {
+    background-color: #f0f0f0;
+    border: 1px solid #d0d0d0;
+    position: absolute;
+    left: -200px;
+    top: 30px;
+}
+.down-triangle {
+    width: 0;
+    height: 0;
+    border-top: 10px solid #d0d0d0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: absolute;
+    left: -200px;
+}
+.SimpleChart #highlighter {
+    position: absolute;
+    left: -200px;
+}
+.-simple-chart-holder {
+    float: left;
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #cecece;
+    /*padding: 6px;*/
+}
+.SimpleChart .legendsli {
+    list-style: none;
+}
+.SimpleChart .legendsli span {
+    float: left;
+    vertical-align: middle;
+}
+.SimpleChart .legendsli span.legendindicator {
+    position: relative;
+    top: 5px;
+}
+.SimpleChart .legendsli span.legendindicator .line {
+    width: 30px;
+    height: 3px;
+}
+.SimpleChart .legendsli span.legendindicator .circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 20px;
+    position: relative;
+    top: -5px;
+    right: 20px;
+}
+/******Starts::Horizontal Alignment of Legends******/
+
+.simple-chart-legends {
+    background: #E7E7E7;
+    border: 1px solid #d6d7dd;
+    padding: 5px;
+    margin: 2px 0px;
+}
+.simple-chart-legends ul {} .simple-chart-legends ul li {
+    display: inline;
+    border-right: 1px solid #d6d7dd;
+    float: left;
+    padding: 10px;
+}
+.simple-chart-legends ul li:last-child {
+    border-right: 0px;
+}
+.simple-chart-legends.vertical {
+    margin: 0px 10px;
+}
+.simple-chart-legends.vertical ul li {
+    display: block;
+    border: 0px;
+    border-bottom: 1px solid #d6d7dd;
+}
+.simple-chart-legends.vertical ul li:last-child {
+    border-bottom: 0px;
+}
+.simple-chart-legends .legendvalue {
+    padding-left: 2px;
+    background: #fff;
+}
+/******Starts::Horizontal Alignment of Legends******/
+
+.simple-chart-Header {
+    position: absolute;
+    font-size: 16px;
+}
+.progress-chart .SimpleChart .legendsli span {
+    float: none;
+    display:inline-block;
+    vertical-align: inherit;
+    padding-right:10px;
+    font-size:14px;
+    font-family: 'HelveticaNeue';
+}
+.progress-chart .SimpleChart .legendsli span.legendindicator {
+    position: relative;
+    top: 0;
+}
+.progress-chart .SimpleChart .legendsli span.legendindicator .square {
+    width: 12px;
+    height: 12px;    
+    position: relative;    
+}
+.progress-chart .simple-chart-legends {
+    background:none;
+    border:none;
+    height:100% !important;
+}
+.progress-chart .simple-chart-legends ul {
+    margin:0;
+    padding:0;
+} 
+.progress-chart .simple-chart-legends ul li {
+    display: block;    
+    padding:0;
+    margin:5px 0;
+    float:none;
+    border:none;
+}
+.progress-chart .simple-chart-legends ul:before, .progress-chart .simple-chart-legends ul:after {
+    content:"";
+    clear:both;
+}
+.progress-chart .simple-chart-legends > span {
+    color:#5b5b5b;
+    font-family: 'HelveticaBd';
+    font-size:15px;
+}
+.progress-chart .SimpleChart .legendsli span {
+    float: none;
+    display:inline-block;
+    vertical-align: inherit;
+    padding-right:10px;
+    font-size:14px;
+    font-family: 'HelveticaNeue';
+}
+.progress-chart .SimpleChart .legendsli span.legendindicator {
+    position: relative;
+    top: 0;
+}
+.progress-chart .SimpleChart .legendsli span.legendindicator .square {
+    width: 12px;
+    height: 12px;    
+    position: relative;    
+}
+.progress-chart .simple-chart-legends {
+    background:none;
+    border:none;
+    height:100% !important;
+}
+.progress-chart .simple-chart-legends ul {
+    margin:0;
+    padding:0;
+} 
+.progress-chart .simple-chart-legends ul li {
+    display: block;    
+    padding:0;
+    margin:5px 0;
+    float:none;
+    border:none;
+}
+.progress-chart .simple-chart-legends ul:before, .simple-chart-legends ul:after {
+    content:"";
+    clear:both;
+}
+.progress-chart .simple-chart-legends > span {
+    color:#5b5b5b;
+    font-family: 'HelveticaBd';
+    font-size:15px;
+}
+/**/
+.statistics .SimpleChart .legendsli span {
+    float: none;
+    display:inline-block;
+    vertical-align: inherit;
+    padding-right:10px;
+    font-size:14px;
+    font-family: 'HelveticaNeue';
+}
+.statistics .SimpleChart .legendsli span.legendindicator {
+    position: relative;
+    top: 0;
+}
+.statistics .simple-chart-legends ul li .square {
+    width: 12px;
+    height: 12px;    
+    position: relative;    
+}
+.statistics .simple-chart-legends {
+    background:none;
+    border:none;
+    height:100% !important;
+}
+.statistics .simple-chart-legends ul {
+    margin:0;
+    padding:0;
+} 
+.pstatistics .simple-chart-legends ul li {
+    display: block;    
+    padding:0;
+    margin:5px 0;
+    float:none;
+    border:none;
+}
+.statistics .simple-chart-legends ul:before, .statistics .simple-chart-legends ul:after {
+    content:"";
+    clear:both;
+}
+.statistics .simple-chart-legends > span {
+    color:#5b5b5b;
+    font-family: 'HelveticaBd';
+    font-size:15px;
+}
+.statistics .SimpleChart .legendsli span {
+    float: none;
+    display:inline-block;
+    vertical-align: inherit;
+    padding-right:10px;
+    font-size:14px;
+    font-family: 'HelveticaNeue';
+}
+.statistics .legendindicator {
+    position: relative;
+    top: 0;
+    padding-right: 10px;
+}
+.statistics .simple-chart-legends ul li .square {
+    width: 10px;
+    height: 10px;    
+    position: relative;    
+    display:inline-block;
+}
+.statistics .simple-chart-legends {
+    background:none;
+    border:none;
+    height:100% !important;
+}
+.statistics .simple-chart-legends ul {
+    margin:0;
+    padding:0;
+} 
+.statistics .simple-chart-legends ul li {
+    display: block;    
+    padding:0;
+    margin:3px 0;
+    float:none;
+    border:none;
+}
+.statistics .simple-chart-legends ul:before, .statistics .simple-chart-legends ul:after {
+    content:"";
+    clear:both;
+}
+.statistics .simple-chart-legends > span {
+    color:#5b5b5b;
+    font-family: 'HelveticaBd';
+    font-size:15px;
+}
+.SimpleChartcanvas {
+    margin-right:0!important;
+}

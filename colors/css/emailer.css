@@ -1,0 +1,123 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	width: 600px;
+}
+h1 {
+	color: #1491CE;
+	text-align: center;
+	margin-bottom: 19px;
+}
+#content {
+	background-color: #1491CE;
+	width: 600px;
+	height: 1034px;
+	text-align: center;
+}
+#box1 {
+	width: 551px;
+	height: 417px;
+	margin-top: 28px;
+	display: inline-block;
+	background-color: #FFFFFF;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+h2  {
+	float: left;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	font-size: 65px;
+	line-height: 66px;
+	color: #000000;
+	font-style: normal;
+	font-weight: bold;
+	margin-left: 47px;
+	margin-right: 13px;
+	text-align: left;
+	margin-top: -361px;
+	width: 478px;
+}
+.commencer {
+	color: #FFFFFF;
+	background-color: #62AC44;
+	font-weight: bold;
+	text-decoration: none;
+	margin-right: 2.4em;
+	letter-spacing: 1px;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	margin-top: -20.3px;
+	border-bottom-left-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	padding-top: 0.7em;
+	padding-right: 3em;
+	padding-left: 3em;
+	padding-bottom: 0.7em;
+	border-bottom: 2px solid #3D6929;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	font-size: 16px;
+	float: left;
+	margin-left: 87px;
+}
+#box2 {
+	width: 551px;
+	height: 558px;
+	background-color: #FFFFFF;
+	padding-top: 0px;
+	margin-top: -11px;
+	float: left;
+	margin-left: 25px;
+}
+h3  {
+	color: #313131;
+	font-weight: normal;
+	font-size: 16px;
+	margin-left: 20px;
+	text-align: left;
+	margin-right: 14px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	line-height: 22px;
+	letter-spacing: 0px;
+	margin-top: 26px;
+	margin-bottom: 52px;
+}
+h4  {
+	font-size: 15px;
+	line-height: 37px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	text-align: left;
+	margin-left: 16px;
+	margin-top: 92px;
+	/* [disabled]margin-bottom: 0px; */
+	font-weight: normal;
+	color: #313131;
+	float: left;
+	width: 516px;
+}
+h4 a  {
+	color: #055960;
+	text-decoration: none;
+}
+
+#box1 img {
+	float: left;
+	width: 100%;
+}.logo {
+	width: 219px;
+	height: 91px;
+	padding-top: 32px;	
+	padding-bottom:10px;
+}
